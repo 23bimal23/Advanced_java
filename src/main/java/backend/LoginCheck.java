@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Shalon
  */
-@WebFilter("/*")
+//@WebFilter("/*")
 
 
 public class LoginCheck implements Filter{
