@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Shalon
  */
-//@WebFilter("/*")
+@WebFilter("/*")
 
 
 public class LoginCheck implements Filter{
@@ -37,7 +37,7 @@ public class LoginCheck implements Filter{
             if(session.getAttribute("username")==null){
                 session.setAttribute("errorMsg", "you are not logged in");
                 System.out.println(session.getAttribute("errorMsg"));
-                res.sendRedirect("/ServletDemo/frontend/LoginForm.jsp");
+                res.sendRedirect("/Webapp1/frontend/LoginForm.jsp");
                 return;
             }else{
                 
