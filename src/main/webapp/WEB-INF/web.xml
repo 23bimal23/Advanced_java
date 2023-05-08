@@ -80,6 +80,10 @@
         <servlet-name>SaveSales</servlet-name>
         <servlet-class>backend.SaveSales</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>getItemForView</servlet-name>
+        <servlet-class>backend.getItemForView</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>itemSave</servlet-name>
         <url-pattern>/itemSave</url-pattern>
@@ -159,6 +163,10 @@
     <servlet-mapping>
         <servlet-name>SaveSales</servlet-name>
         <url-pattern>/SaveSales</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getItemForView</servlet-name>
+        <url-pattern>/getItemForView</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

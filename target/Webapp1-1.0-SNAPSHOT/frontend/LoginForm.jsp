@@ -1,3 +1,4 @@
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
@@ -18,13 +19,14 @@
     
     }
 %>
-
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-         <style>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <style>
         .main-content{
             width:350px;
             float: none;
@@ -51,9 +53,7 @@
      
         
     </style>
-    </head>
-     
-     <body style="background-image: linear-gradient(272deg, #434343 0%, black 100%)">
+    <body style="background-image: linear-gradient(272deg, #434343 0%, black 100%)">
         <div class="main-content">
             <div class="title">
                 Login User

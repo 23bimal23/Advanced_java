@@ -45,7 +45,7 @@ public class GetAllItem extends HttpServlet {
             ResultSet result = stmt.executeQuery(query);
             String table="<table border='1'>";
             table+="<tr>";
-            table+="<th>ID<th>Name<th>Price<th>Stock";
+            table+="<th>ID<th>Name<th>Price<th>Stock<th>Action";
             table+="</tr>";
             
             while(result.next()){
@@ -58,6 +58,7 @@ public class GetAllItem extends HttpServlet {
                     table+="<td>"+result.getString("stock")+"</td>";
                     table+="<td><a onclick='return confirm(\"Are you sure to delete?\")'  href= '../DeleteItem?id="+id+"'>Delete</a></td>";
                     table+="<td><a href= '../GetOneItem?id="+id+"'>Update</a></td>";
+                    table+="<td><a href= '../getItemForView?id="+id+"'>View</a></td>";
                     table+="</tr>";
                 
             }
