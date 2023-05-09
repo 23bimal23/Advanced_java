@@ -21,7 +21,7 @@
             <label>Item Price</label><input type="text" name="itemPrice"/>
             <label>Quantity</label><input type="text" name="itemQuantity"/>
 
-            <input type="submit" />
+            <input type="submit" class="btn success"/>
         </form>
             </div>
         </div>

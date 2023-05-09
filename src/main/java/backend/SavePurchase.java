@@ -43,7 +43,7 @@ public class SavePurchase extends HttpServlet {
           String price = req.getParameter("itemPrice");
           String quantity = req.getParameter("itemQuantity");
           
-          String query = "INSERT INTO `tbl_purchase`( `item_id`, `quantity`, `price`) VALUES (?,?,?) ";
+          String query = "INSERT INTO `tbl_purchase`( `item_id`, `quantity`, `price`,`date`) VALUES (?,?,?,?) ";
           String query1="UPDATE `tbl_item` SET `stock`= ? +(SELECT stock from tbl_item WHERE id= ?)WHERE id=?";
           
           PreparedStatement obj = con.prepareStatement(query);
@@ -51,6 +51,7 @@ public class SavePurchase extends HttpServlet {
           obj.setString(1, item_id);
           obj.setString(2, quantity);
           obj.setString(3, price);
+          obj.setString(4,"2019-10-13");
           
           obj.executeUpdate();
           

@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -54,6 +55,8 @@ public class getItemForView extends HttpServlet {
         session.setAttribute("itemPrice",result.getString("price"));
         session.setAttribute("photo", result.getString("photo"));
         resp.sendRedirect("frontend/viewItem.jsp");
+//        RequestDispatcher rd = req.getRequestDispatcher("frontend/viewItem.jsp");
+//        rd.forward(req, resp);
     } catch (SQLException ex) {
         Logger.getLogger(GetOneItem.class.getName()).log(Level.SEVERE, null, ex);
     }
